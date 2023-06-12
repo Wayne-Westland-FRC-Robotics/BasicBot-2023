@@ -11,6 +11,7 @@ import frc.robot.Constants.GeneralConstants;
 import frc.robot.commands.ArmCommand;
 import frc.robot.commands.DrivetrainCommand;
 import frc.robot.commands.PneumaticsCommand;
+import frc.robot.commands.Autonomous_ForwardBack;
 import frc.robot.subsystems.ArmSubsystem;
 import frc.robot.subsystems.DrivetrainSubsystem;
 import frc.robot.subsystems.PneumaticsSubsystem;
@@ -44,6 +45,6 @@ public class RobotContainer {
   }
 
   public Command getAutonomousCommand() {
-    return null;
+    return new Autonomous_ForwardBack(m_drivetrain);
   }
 }
